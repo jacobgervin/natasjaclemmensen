@@ -1,17 +1,40 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
-const SvgComponent = () => (
+const SvgComponent = ({themeColor}) => {
+    console.log(themeColor);
+    return (
 <motion.svg
-initial={{ scale: 0.75}}
-animate={{scale: 0.5}}
+initial={{ scale: 1}}
+animate={{scale: 0.75}}
 transition={{
     delay: 2,
     ease: "easeIn",
     repeatType: "once",
   }}
-id="Lag_2" data-name="Lag 2" xmlns="http://www.w3.org/2000/svg" width="400px" height="200px" viewBox="0 0 58.69 23.53">
+id="Lag_2" data-name="Lag 2" xmlns="http://www.w3.org/2000/svg" width="400px" height="400px" viewBox="0 0 58.69 23.53">
+      <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="20%" stopColor={themeColor} />
+        <stop offset="80%" stopColor="#fff" />
+      </linearGradient>
+    </defs>
+  
   <g id="Lag_1-2" data-name="Lag 1">
+  <motion.circle
+  initial={{ fill: "url(#gradient)", opacity:0, }}
+  animate={{fill: "url(#gradient)", opacity: 1}}
+  transition={{
+    duration: 1,
+      delay: 2,
+      ease: "easeIn",
+      repeatType: "once",
+    }}
+        cx="30"
+        cy="5"
+        r="20"
+        fill="url(#gradient)"
+      />
     <motion.path
     id="natasja"
               initial={{ pathLength: 0}}
@@ -21,7 +44,7 @@ id="Lag_2" data-name="Lag 2" xmlns="http://www.w3.org/2000/svg" width="400px" he
                 ease: "easeIn",
                 repeatType: "once",
               }}
-    stroke="#EBC5C5"
+    stroke={themeColor}
     strokeDasharray={228}
     strokeDashoffset={228}
     stroke-width="1.5"
@@ -49,5 +72,6 @@ id="Lag_2" data-name="Lag 2" xmlns="http://www.w3.org/2000/svg" width="400px" he
 </motion.svg>
 
 );
+};
 
 export default SvgComponent;
