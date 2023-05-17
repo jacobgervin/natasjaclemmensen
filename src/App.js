@@ -15,13 +15,13 @@ function App() {
     return predefinedColors[randomIndex];
   }, []);
   return (
-    <>
+    <div className='bg-[#FEFDFF]'>
     <Navbar themeColor={themeColor}  />
     <Welcome themeColor={themeColor} />
-    <Projects />
+    <Projects themeColor={themeColor} />
     <About themeColor={themeColor} />
     <Contact themeColor={themeColor} />
-    </>
+    </div>
   );
 }
 

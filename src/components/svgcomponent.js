@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const SvgComponent = ({themeColor}) => {
     console.log(themeColor);
     return (
-<motion.svg
-initial={{ scale: 0.75}}
+<motion.svg className={"mt-20"}
+initial={{ scale: 0.80}}
 animate={{scale: 0.60}}
 transition={{
     delay: 2,
