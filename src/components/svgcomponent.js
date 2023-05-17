@@ -5,8 +5,8 @@ const SvgComponent = ({themeColor}) => {
     console.log(themeColor);
     return (
 <motion.svg
-initial={{ scale: 1}}
-animate={{scale: 0.75}}
+initial={{ scale: 0.75}}
+animate={{scale: 0.60}}
 transition={{
     delay: 2,
     ease: "easeIn",

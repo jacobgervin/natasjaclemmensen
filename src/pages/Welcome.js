@@ -6,9 +6,9 @@ function Welcome({themeColor}) {
             <div>
             <SvgComponent themeColor={themeColor} />
             </div>
-            <div className="absolute md:bottom-20 bottom-10 text-center">
-            <h2 className="font-ivyora font-light text-2xl">Grafisk designer</h2>
-            <h1 className="font-ivyora font-light text-3xl">Natasja Clemmensen</h1>
+            <div className="absolute md:bottom-20 bottom-10 text-center space-y-2">
+            <h2 className="font-ivyora font-thin text-lg md:text-2xl tracking-widest">GRAFISK DESIGNER</h2>
+            <h1 className="font-ivyora font-medium text-xl md:text-3xl tracking-widest">NATASJA CLEMMENSEN</h1>
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Welcome from '../src/pages/Welcome';
 import Projects from '../src/pages/Projects';
 import About from './pages/about';
+import Contact from './pages/contact';
 import React from 'react';
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
     <Welcome themeColor={themeColor} />
     <Projects />
     <About themeColor={themeColor} />
+    <Contact themeColor={themeColor} />
     </>
   );
 }
