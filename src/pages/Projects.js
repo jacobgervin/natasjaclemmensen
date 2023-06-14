@@ -57,7 +57,7 @@ function Projects({themeColor}) {
             <div className="modal-content md:w-2/3 md:w-3/4 w-screen bg-[#FEFDFF]">
   
             <div className="flex flex-col md:flex-row mb-5">
-            <Carousel className="aspect-square w-96 " slideInterval={9000}>
+            <Carousel className="aspect-square w-full " slideInterval={9000}>
       <img className="aspect-square w-fit p-2"
         alt="..."
         src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80"
