@@ -37,7 +37,7 @@ function Projects({themeColor}) {
               layoutId={project.id}
               key={project.id}
               onClick={() => openImage(project.id)}
-              className="image-container overflow-hidden mb-8"
+              className="image-container overflow-hidden mb-8 cursor-pointer"
             >
               <motion.img whileHover={{ scale: 1.1}} className="w-full aspect-square " src={project.image} alt={project.title} />
             </motion.div>
@@ -53,7 +53,7 @@ function Projects({themeColor}) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="modal-content md:w-1/2 w-3/4 bg-[#FEFDFF]">
+            <div className="modal-content md:w-2/3 w-3/4 bg-[#FEFDFF]">
   
             <div className="flex flex-col md:flex-row mb-5">
               <img className="aspect-square w-96 p-2" src={selectedImage.image} alt={selectedImage.name} />
@@ -67,7 +67,7 @@ function Projects({themeColor}) {
                   </div>
               </div>
               </div>
-              <div className="flex flex-row justify-center">
+              <div className="flex flex-row justify-center ">
               <motion.button whileTap={{ scale: 0.9 }} whileHover={{ backgroundColor: themeColor}} className="p-2 w-full flex flex-row justify-center bg-[#2A2538]" onClick={closeImage}><motion.svg whileHover={{ rotate: 90,}}  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FEFFF5" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 </motion.svg>

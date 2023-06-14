@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link, animateScroll } from 'react-scroll';
 import "./navbar.css"
 
+
 function Navbar({themeColor}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (

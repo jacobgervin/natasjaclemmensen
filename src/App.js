@@ -15,6 +15,7 @@ function App() {
     return predefinedColors[randomIndex];
   }, []);
   return (
+    
     <div className='bg-[#FEFDFF]'>
     <Navbar themeColor={themeColor}  />
     <Welcome themeColor={themeColor} />
