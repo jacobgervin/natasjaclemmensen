@@ -1,6 +1,7 @@
 import { Myprojects } from "./myprojects";
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Carousel } from 'flowbite-react';
 
 function Projects({themeColor}) {
   const projects = Myprojects;
@@ -53,10 +54,32 @@ function Projects({themeColor}) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="modal-content md:w-2/3 w-3/4 bg-[#FEFDFF]">
+            <div className="modal-content md:w-2/3 md:w-3/4 w-screen bg-[#FEFDFF]">
   
             <div className="flex flex-col md:flex-row mb-5">
-              <img className="aspect-square w-96 p-2" src={selectedImage.image} alt={selectedImage.name} />
+            <Carousel className="aspect-square w-96 " slideInterval={9000}>
+      <img className="aspect-square w-fit p-2"
+        alt="..."
+        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80"
+      />
+      <img className="aspect-square w-fit p-2"
+        alt="..."
+        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+      />
+      <img className="aspect-square w-fit p-2"
+        alt="..."
+        src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+      />
+      <img className="aspect-square w-fit p-2"
+        alt="..."
+        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+      />
+      <img className="aspect-square w-fit p-2"
+        alt="..."
+        src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+      />
+    </Carousel>
+
               <div className="p-2 space-y-5 mt-2 flex flex-col md:justify-center">
                 <p className="text-xl font-light font-ivyora tracking-widest">{selectedImage.name}</p>
                 <p>{selectedImage.about}</p>
