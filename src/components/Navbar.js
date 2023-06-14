@@ -6,6 +6,9 @@ import "./navbar.css"
 
 function Navbar({themeColor}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   return (
 <nav class="fixed w-screen z-50 bg-[#FEFDFF]">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
@@ -15,21 +18,28 @@ function Navbar({themeColor}) {
 </svg>
 
     </Link>
-    <motion.button whileTap={{ scale: 0.8 }}
- data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden" aria-controls="navbar-default" aria-expanded="false">
+    <motion.button whileTap={{ scale: 0.8 }} onClick={() => setIsMenuOpen(!isMenuOpen)}
+  type="button" class="inline-flex items-center p-2 ml-3 text-sm  rounded-lg md:hidden" aria-controls="navbar-default" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
+      {!isMenuOpen ? (
       <motion.svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></motion.svg>
+      ) : (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+      )}
     </motion.button>
-    <div class={`md:block md:w-auto w-full ${isMenuOpen ? 'block w-screen top-0 h-[60vh]' : 'hidden'}`} id="navbar-default">
-      <ul class="font-medium md:relative absolute w-full  z-40 flex flex-col justify-center p-2 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8  md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <div class={`md:block md:w-auto w-full ${isMenuOpen ? 'block w-screen absolute left-0 top-20 md:top-0 bottom-0 h-[100vh]' : 'hidden'}`} id="navbar-default">
+      <ul class="font-medium md:relative absolute w-full h-full    z-40 flex flex-col md:space-y-0 space-y-20 md:justify-center p-2 md:p-0  rounded-lg bg-[#FEFDFF] md:flex-row md:space-x-8  md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
-          <Link to='projekter' smooth={true} class="block py-2 pl-3 pr-4 rounded text-sm md:p-0 font-light font-ivyora tracking-widest navlink cursor-pointer">PROJEKTER</Link>
+          <Link to='projekter' onClick={() => closeMenu()} smooth={true} class="block py-2 pl-3 pr-4 rounded mt-40 md:mt-0 text-3xl md:text-sm md:p-0 font-light font-ivyora tracking-widest navlink cursor-pointer">PROJEKTER</Link>
         </li>
         <li>
-        <Link to='om' smooth={true} class="block py-2 pl-3 pr-4 rounded text-sm md:p-0 font-light font-ivyora tracking-widest navlink cursor-pointer">OM MIG</Link>
+        <Link to='om' onClick={() => closeMenu()} smooth={true} class="block py-2 pl-3 pr-4 rounded text-3xl md:text-sm md:p-0 font-light font-ivyora tracking-widest navlink cursor-pointer">OM MIG</Link>
         </li>
         <li>
-        <Link to='kontakt' smooth={true} class="block py-2 pl-3 pr-4 rounded text-sm md:p-0 font-light font-ivyora tracking-widest navlink cursor-pointer">KONTAKT</Link>
+        <Link to='kontakt' onClick={() => closeMenu()} smooth={true} class="block py-2 pl-3 pr-4 rounded text-3xl md:text-sm md:p-0 font-light font-ivyora tracking-widest navlink cursor-pointer">KONTAKT</Link>
         </li>
       </ul>
     </div>
