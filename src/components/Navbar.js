@@ -31,7 +31,7 @@ function Navbar({themeColor}) {
       )}
     </motion.button>
     <div class={`md:block md:w-auto w-full ${isMenuOpen ? 'block w-screen absolute left-0 top-20 md:top-0 bottom-0 h-[100vh]' : 'hidden'}`} id="navbar-default">
-      <ul class="font-medium md:relative absolute w-full h-full    z-40 flex flex-col md:space-y-0 space-y-20 md:justify-center p-2 md:p-0  rounded-lg bg-[#FEFDFF] md:flex-row md:space-x-8  md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="font-medium md:relative absolute w-full h-full    z-40 flex flex-col md:space-y-0 space-y-20 md:justify-center p-2 md:p-0  rounded-lg bg-[#FEFDFF] md:flex-row md:space-x-8  md:mt-0 md:border-0 ">
         <li>
           <Link to='projekter' onClick={() => closeMenu()} smooth={true} class="block py-2 pl-3 pr-4 rounded mt-40 md:mt-0 text-3xl md:text-sm md:p-0 font-light font-ivyora tracking-widest navlink cursor-pointer">PROJEKTER</Link>
         </li>
