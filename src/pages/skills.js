@@ -19,6 +19,32 @@ export const SKILLS = [
         "name": "CANVA",
 
       },
+      {
+        "name": "AFTER EFFECTS",
 
+      },
+      {
+        "name": "PREMIERE PRO",
 
+      },
+      {
+        "name": "SHOPIFY",
+
+      },
+      {
+        "name": "WORDPRESS",
+
+      },
+      {
+        "name": "HTML",
+
+      },
+      {
+        "name": "CSS",
+
+      },
+      {
+        "name": "JAVASCRIPT",
+
+      },
 ]

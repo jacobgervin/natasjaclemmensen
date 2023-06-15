@@ -15,7 +15,7 @@ function About({ themeColor }) {
                     </div></div>
                     <div style={{ borderColor: themeColor }} className={`md:border-l-2  border-${themeColor} px-3 space-y-2`}>
                     <h2 className="text-2xl font-light font-ivyora tracking-widest text-[#2A2538]">Kort fortalt</h2>
-                    <p className="text-[#2A2538]">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                    <p className="text-[#2A2538]">Jeg hedder Natasja, og er en 24-årig multimediedesigner, som netop er blevet uddannet. Min passion er grafisk design og skabelsen af gode brugeroplevelser. Jeg har en stærk sans for æstetik og en evne til at kombinere farver, typografi og billeder for at skabe visuelle kompositioner, der fanger brugerens opmærksomhed og kommunikerer budskaber effektivt.</p>
                     </div>
                     <div style={{ borderColor: themeColor }} className={`md:border-l-2 border-${themeColor} flex flex-col mt-10 px-3`}>
                     <h2 className="text-2xl font-light font-ivyora tracking-widest text-[#2A2538]">Færdigheder</h2>
